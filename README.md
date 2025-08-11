@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROJA TRADERS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS to handle the font family and a few other overrides */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .header-bg {
+            /* Using a placeholder image to demonstrate the background property */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('cow2.png');
+            background-size: cover; /* This makes the image cover the entire div */
+            background-position: center; /* This centers the image within the div */
+            background-repeat: no-repeat;
+        }
+        .description {
+            display: none;
+            margin-top: 0.75rem;
+            padding: 1rem;
+            background-color: #f1f5f9; /* slate-100 */
+            border-radius: 0.5rem;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-green-800 text-green-700">
+
+    <!-- Header Section -->
+    <header class="header-bg relative flex items-center justify-center text-center text-green-600 min-h-[50vh] rounded-b-3xl shadow-xl">
+        <div class="p-8 md:p-12 bg-black bg-opacity-40 backdrop-blur-sm rounded-2xl border-2 border-gray-100 border-opacity-30">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight">ROJA TRADERS</h1>
+            <p class="mt-4 text-lg sm:text-xl font-medium max-w-2xl mx-auto">Specialized in high-quality cow feeds for health and superior milk production.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-12 mt-8">
+        
+        <!-- Products Section -->
+        <section class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 lg:p-12 mb-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-center mb-10">Our Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-item bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 transition-all duration-300 hover:shadow-xl hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2">Super Fine Bran</h3>
+                    <p class="text-lg text-gray-600 mb-4">Price: ₹1,050 / 50kg bag</p>
+                    <button onclick="showDescription('superfine')" class="w-full bg-green-600 text-white font-semibold py-3 px-4 rounded-full shadow-lg transition-colors duration-300 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                        View Description
+                    </button>
+                    <div id="superfine-desc" class="description">
+                        <p>A premium feed designed to support optimal health and very thick, rich milk production in cows.</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-item bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 transition-all duration-300 hover:shadow-xl hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2">Fine Bran</h3>
+                    <p class="text-lg text-gray-600 mb-4">Price: ₹850 / 50kg bag</p>
+                    <button onclick="showDescription('fine')" class="w-full bg-green-600 text-white font-semibold py-3 px-4 rounded-full shadow-lg transition-colors duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        View Description
+                    </button>
+                    <div id="fine-desc" class="description">
+                        <p>An excellent choice for maintaining cow health and ensuring consistent, high-volume milk supply.</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-item bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 transition-all duration-300 hover:shadow-xl hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-2">Nice</h3>
+                    <p class="text-lg text-gray-600 mb-4">Price: ₹650 / 50kg bag</p>
+                    <button onclick="showDescription('nice')" class="w-full bg-green-600 text-white font-semibold py-3 px-4 rounded-full shadow-lg transition-colors duration-300 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                        View Description
+                    </button>
+                    <div id="nice-desc" class="description">
+                        <p>A balanced feed suitable for calves and other animals to support better health and promote healthy growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section (Full-width) -->
+    <footer class="bg-gray-800 text-white p-6 md:p-8 mt-12 rounded-t-3xl shadow-inner">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-xl md:text-2xl font-bold mb-3">Contact Information</h2>
+            <div class="space-y-1 text-gray-300 text-sm md:text-base">
+                <p>95/1 Kodangipalayam</p>
+                <p>Nallattipalayam Post</p>
+                <p>Kinathukadavu, Coimbatore - 642009</p>
+                <p><strong>Phone:</strong> 9994736006</p>
+                <p><strong>Email:</strong> rojatraders2440@gmail.com</p>
+            <p class="mt-6 text-xs md:text-sm text-gray-500">© Design and development by Jaffer sadiq.</p>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * Toggles the visibility of a product's description.
+         * Hides any other open descriptions to keep the UI clean.
+         * @param {string} productId - The unique ID of the product description to toggle.
+         */
+        function showDescription(productId) {
+            const descriptionElement = document.getElementById(productId + '-desc');
+            const allDescriptions = document.querySelectorAll('.description');
+            
+            // Loop through all descriptions and hide them if they are not the target one
+            allDescriptions.forEach(desc => {
+                if (desc.id !== descriptionElement.id) {
+                    desc.style.display = 'none';
+                }
+            });
+
+            // Toggle the display of the target description
+            if (descriptionElement.style.display === 'block') {
+                descriptionElement.style.display = 'none';
+            } else {
+                descriptionElement.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
